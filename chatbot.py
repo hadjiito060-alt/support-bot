@@ -1,10 +1,10 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-# تحميل نموذج الـ Embeddings
+
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# فتح قاعدة البيانات
+
 client = chromadb.PersistentClient(path="db")
 collection = client.get_collection("myvala")
 
@@ -30,5 +30,5 @@ while True:
     print("\nBot :")
     print(title)
     print("-" * 50)
-    print(article[:1200])  # عرض أول 1200 حرف
+    print(article[:1200]) 
     print("\nSource :", url)
