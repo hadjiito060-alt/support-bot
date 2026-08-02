@@ -4,11 +4,10 @@ import json
 
 BASE_URL = "https://www.myvala.com"
 
-# صفحة قاعدة المعرفة
 response = requests.get(BASE_URL + "/knowledgebase")
 soup = BeautifulSoup(response.text, "html.parser")
 
-# جمع روابط المقالات
+
 links = set()
 
 for a in soup.find_all("a", href=True):
